@@ -48,6 +48,14 @@
       </div>
     </nav>
   <!--fin barra de navegacion-->
+  <!--barra de noticias-->
+  <% if notice %>
+      <p class="notice alert-info"><%= notice %></p>
+  <% end %>
+  <% if alert %>
+      <p class="alert  alert-danger"><%= alert %></p>
+  <% end %>
+  <!--fin barra de noticias-->
   <!--contenido de las vistas-->
   <div class="contenido">
     <%= yield %>
