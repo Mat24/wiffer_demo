@@ -7,8 +7,52 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+<!--cuerpo de la aplicacion-->
+<div class="cuerpo">
+  <!--barra de navegacion-->
+    <nav class="navbar navbar-inverse navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <spam class="sr-only">Toggle navigation</spam>
+            <spam class="icon-bar"></spam>
+            <spam class="icon-bar"></spam>
+            <spam class="icon-bar"></spam>
+          </button>
+          <a href="#" class="navbar-brand"><span class="glyphicon glyphicon-signal" aria-hidden="true"></span> <strong> WI</strong>ffer</a>
+        </div>
+        <!--Parte de links y contenido de la barra de navegacion-->
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Operaciones</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Estadisticas</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-education" aria-hidden="true"></span> Documentacion</a></li>
+            <li><a href="#">Acerca De..</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Usuarios <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <% if defined?(current_user) %>
+                    <li><a href="#">registrado</a></li>
+                    <li><a href="#">registrado</a></li>
+                    <li><a href="#">registrado</a></li>
+                <% else %>
+                    <li><a href="#">Registrarse</a></li>
+                    <li><a href="#">Recuperar Contraseña</a></li>
+                <% end %>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  <!--fin barra de navegacion-->
+  <!--contenido de las vistas-->
+  <div class="contenido">
+    <%= yield %>
+  </div>
+  <!--fin del contenido de las vistas-->
+</div>
 </body>
 </html>
