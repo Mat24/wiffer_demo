@@ -1,0 +1,65 @@
+<%= form_for(@campaign) do |f| %>
+    <% if @campaign.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@campaign.errors.count, "error") %> prohibited this campaign from being saved:</h2>
+
+          <ul>
+            <% @campaign.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
+    </div>
+    <div class="field">
+      <%= f.label :summary %><br>
+      <%= f.text_field :summary %>
+    </div>
+    <div class="field">
+      <%= f.label :description %><br>
+      <%= f.text_area :description %>
+    </div>
+    <div class="field">
+      <%= f.label :art_type %><br>
+      <%= f.text_field :art_type %>
+    </div>
+    <div class="field">
+      <%= f.label :content %><br>
+      <%= f.text_area :content %>
+    </div>
+    <div class="field">
+      <%= f.label :cam_hora %><br>
+      <%= f.text_field :cam_hora %>
+    </div>
+    <div class="field">
+      <%= f.label :date %><br>
+      <%= f.text_field :date %>
+    </div>
+    <div class="field">
+      <%= f.label :target %><br>
+      <%= f.text_field :target %>
+    </div>
+    <div class="field">
+      <%= f.label :user_id %><br>
+      <%= f.number_field :user_id %>
+    </div>
+    <div class="field">
+      <%= f.label :est_campaign_id %><br>
+      <%= f.number_field :est_campaign_id %>
+    </div>
+    <div class="field">
+      <%= f.label :typ_campaign_id %><br>
+      <%= f.number_field :typ_campaign_id %>
+    </div>
+    <div class="field">
+      <%= f.label :template_id %><br>
+      <%= f.number_field :template_id %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>

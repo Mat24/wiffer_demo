@@ -1,0 +1,26 @@
+
+<%= form_for(@network) do |f| %>
+    <div class="navbar-form">
+      <div class="form_group">
+        <div class="field">
+          <%= f.label :essid %> <%= f.text_field :essid %>
+          <%= f.label :bssid %> <%= f.text_field :bssid %>
+          <%= f.label :band %> <%= f.text_field :band %>
+          <%= f.label :channel %> <%= f.text_field :channel %>
+          <%= f.label :security_type %> <%= f.text_field :security_type %>
+          <%= f.label :wps %> <%= f.text_field :wps %>
+          <%= f.label :longitude %> <%= f.text_field :longitude %>
+          <%= f.label :latitude %> <%= f.text_field :latitude %>
+        </div>
+      </div>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>
+
+
+
+
+
+

@@ -11,7 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150907222142) do
+ActiveRecord::Schema.define(version: 20150911164755) do
+
+  create_table "networks", force: :cascade do |t|
+    t.string   "essid",         limit: 255, null: false
+    t.string   "bssid",         limit: 255
+    t.string   "band",          limit: 255
+    t.integer  "channel",       limit: 4
+    t.string   "security_type", limit: 255
+    t.boolean  "wps"
+    t.string   "longitude",     limit: 255
+    t.string   "latitude",      limit: 255
+    t.string   "first_seen",    limit: 255
+    t.string   "last_seen",     limit: 255
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "", null: false
